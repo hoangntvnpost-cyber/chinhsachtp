@@ -193,6 +193,108 @@
       font-weight: bold;
       display: none;
     }
+
+    br.extrainfo {
+      display: none;
+    }
+
+    @media only screen and (max-width: 900px) {
+      br.extrainfo {
+        display: block;
+      }
+    }
+
+    #group8 {
+      border: 2px solid #ff5959;
+      transform: scale(1.01);
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Làm nổi bật tiêu đề với dải màu Gradient */
+    #group8 .policy-group-title {
+      color: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #ff5959;
+    }
+
+    /* Nhãn HOT có hiệu ứng nhấp nháy thu hút sự chú ý */
+    .hot-badge {
+      background-color: #f1c40f;
+      color: #ff1f06;
+      font-size: 13px;
+      padding: 4px 12px;
+      border-radius: 5px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      animation: pulseBlink 1.5s infinite;
+    }
+
+    @keyframes pulseBlink {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.1);
+        opacity: 0.85;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Định dạng tiêu đề kêu gọi */
+    .hiring-call {
+      text-align: left;
+      font-size: 18px;
+      margin: 10px 0 20px 0;
+      font-weight: 700;
+    }
+
+    /* Dàn trang dạng thẻ cho các vị trí tuyển dụng */
+    .job-cards {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .job-card {
+      flex: 1;
+      min-width: 250px;
+      background: var(--white);
+      border-left: 5px solid #ff5959;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s;
+    }
+
+    .job-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .job-card-title {
+      font-weight: 500;
+      color: #f60202;
+      margin-bottom: 8px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .job-card-desc {
+      font-size: 14.5px;
+      color: #555;
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -202,8 +304,9 @@
     <header>
       <img src="img/cover.jpg" style="width: 100%;">
       <p>✉️ <a style="color:inherit" href="https://forms.gle/Afb56ydDpcjGHz1N7">Hộp thư góp ý</a> &nbsp;&nbsp; 💡 <a
-          style="color:inherit" href="https://forms.gle/bGxf2dShAHJcd3yR7">Gửi sáng kiến</a> &nbsp;&nbsp; 📧 <a
-          style="color:inherit" href="https://zalo.me/g/z4ltt7k52k5vsoahkjt0">Email lương</a></p>
+          style="color:inherit" href="https://forms.gle/bGxf2dShAHJcd3yR7">Gửi sáng kiến</a> &nbsp;&nbsp; <br
+          class="extrainfo" /> 📧 <a style="color:inherit" href="https://zalo.me/g/z4ltt7k52k5vsoahkjt0">Email lương</a>
+      </p>
       <a href="https://zalo.me/g/z4ltt7k52k5vsoahkjt0" class="btn-zalo" target="_blank"><img
           style="vertical-align: middle;" src="img/zalo.png" width="30px"> Click Zalo liên hệ với Văn phòng</a>
     </header>
@@ -222,8 +325,9 @@
         <a href="#group3" class="shortcut-item">🛡️ 3. Bảo hiểm & Phúc lợi chung</a>
         <a href="#group4" class="shortcut-item">🏥 4. Ốm đau & Thai sản</a>
         <a href="#group7" class="shortcut-item">👩 5. Ưu tiên Lao động Nữ</a>
-        <a href="#group5" class="shortcut-item">🤝 6. Tuyển dụng & LĐ Mới</a>
-        <a href="#group6" class="shortcut-item">⛑️ 7. An toàn Lao động</a>
+        <a href="#group6" class="shortcut-item">⛑️ 6. An toàn Lao động</a>
+        <a href="#group5" class="shortcut-item">🤝 7. Chính sách tuyển dụng</a>
+        <a href="#group8" class="shortcut-item">📢 8. Thông tin tuyển dụng</a>
       </div>
     </div>
 
@@ -371,8 +475,30 @@
         </div>
       </div>
 
+      <div class="policy-group" id="group6">
+        <h3 class="policy-group-title">6. An toàn & Vệ sinh lao động</h3>
+        <div class="policy-content">
+          <div class="policy-item">
+            <h4>Trang bị bảo hộ & Môi trường</h4>
+            <ul>
+              <li>Người lao động được chi trả, hỗ trợ tiền lương khi tham gia các khóa học tập, huấn luyện do Nhà máy tổ
+                chức.</li>
+              <li>Công nhân phải được phát miễn phí đồ bảo hộ như khẩu trang chống bụi bông, găng tay... </li>
+              <li>Xưởng may phải đảm bảo các tiêu chuẩn khắt khe về ánh sáng, độ thông gió, kiểm soát tiếng ồn và bụi
+                công nghiệp.</li>
+            </ul>
+          </div>
+          <div class="policy-item">
+            <h4>Khám sức khỏe</h4>
+            <ul>
+              <li>Khám sức khỏe định kỳ ít nhất 01 lần/năm.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="policy-group" id="group5">
-        <h3 class="policy-group-title">6. Tuyển dụng & Hỗ trợ lao động mới</h3>
+        <h3 class="policy-group-title">7. Chính sách tuyển dụng</h3>
         <div class="policy-content">
           <div class="policy-item">
             <h4>Thưởng giới thiệu</h4>
@@ -397,24 +523,38 @@
         </div>
       </div>
 
-      <div class="policy-group" id="group6">
-        <h3 class="policy-group-title">7. An toàn & Vệ sinh lao động</h3>
+      <div class="policy-group" id="group8">
+        <h3 class="policy-group-title">
+          <span>8. Thông tin tuyển dụng</span>
+          <span class="hot-badge">🔥 HOT</span>
+        </h3>
         <div class="policy-content">
-          <div class="policy-item">
-            <h4>Trang bị bảo hộ & Môi trường</h4>
-            <ul>
-              <li>Người lao động được chi trả, hỗ trợ tiền lương khi tham gia các khóa học tập, huấn luyện do Nhà máy tổ
-                chức.</li>
-              <li>Công nhân phải được phát miễn phí đồ bảo hộ như khẩu trang chống bụi bông, găng tay... </li>
-              <li>Xưởng may phải đảm bảo các tiêu chuẩn khắt khe về ánh sáng, độ thông gió, kiểm soát tiếng ồn và bụi
-                công nghiệp.</li>
-            </ul>
-          </div>
-          <div class="policy-item">
-            <h4>Khám sức khỏe</h4>
-            <ul>
-              <li>Khám sức khỏe định kỳ ít nhất 01 lần/năm.</li>
-            </ul>
+          <div class="policy-item" style="border: none;">
+            <h4 class="hiring-call" style="color: #f60202;">📢 Hòa Thọ Triệu Phong cần tuyển</h4>
+
+            <div class="job-cards">
+              <!-- Vị trí 1 -->
+              <div class="job-card">
+                <div class="job-card-title">
+                  <span style="font-size: 20px;">✂️</span> Lao động may
+                </div>
+                <p class="job-card-desc">
+                  Yêu cầu có tay nghề.<br /> <strong>Đặc biệt:</strong> Nếu chưa có sẽ được đào tạo miễn phí.
+                </p>
+              </div>
+
+              <!-- Vị trí 2 -->
+              <div class="job-card">
+                <div class="job-card-title">
+                  <span style="font-size: 20px;">🔎</span> Nhân viên KCS
+                </div>
+                <p class="job-card-desc">
+                  Phụ trách kiểm tra chất lượng sản phẩm.<br /> <strong>Ưu tiên:</strong> Ứng viên đã có kinh nghiệm
+                  trong ngành.
+                </p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>

@@ -24,34 +24,6 @@
         display: block;
     }
 
-    /* Widget hình ảnh nổi */
-    .floating-images {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 5px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        padding: 10px;
-        z-index: 99999;
-        display: flex;
-        flex-direction: row;
-        width: 300px;
-    }
-
-    .floating-images img {
-        width: calc(45% - 5px);
-        display: block;
-        border-radius: 8px;
-        padding: 10px;
-    }
-
-    /* Ẩn trên điện thoại */
-    @media (max-width: 768px) {
-        .floating-images {
-            display: none;
-        }
-    }
 </style>
 
 <body>
@@ -59,10 +31,6 @@
         src="https://script.google.com/macros/s/AKfycbx9WC1eOwBgbK3L_L74wxG9sq4bL7mbm5qiOg2I8xW1eu65rVcYnt5cWwoJ1Tl-Qs6Y/exec?page=review"
         allow="clipboard-read; clipboard-write">
     </iframe>
-    <div class="floating-images">
-        <img src="img/hinh1.png" alt="Hình 1">
-        <img src="img/hinh2.png" alt="Hình 2">
-    </div>
 </body>
 
 </html>
